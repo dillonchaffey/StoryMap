@@ -1,0 +1,49 @@
+.content-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#map-main {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#scroll-box {
+  position: relative;
+  /* pointer-events: none;     */
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.chapter {
+  width: 25%;
+  height: 94%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 10px #000;
+  background-color: rgba(255, 255, 255, 0.65);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.chapter img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.chapter h1 {
+  font-family: 'Domine', serif;
+}
+
+.chapter p {
+  font-family: 'Roboto', sans-serif;
+}

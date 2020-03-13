@@ -1,0 +1,64 @@
+---
+- title: St. Rita's
+  text: Opened on May 1, 1920, this hospital was origionally run by Catholic nuns. My grandmother
+    worked here as a nurse for quite awhile. It has since been demolished but I still
+    go there and park and talk about how I was born on this spot.
+  image: 'St_Ritas.jpg'
+  coords:
+  - 46.123317
+  - -60.199168
+  mapZoom: 16
+  icon: 'fa-baby-carriage'
+  animDur: 5
+- title: Downtown Sydney
+  text: My home town and a nice place to be! During the great wars, the city was a hub of activity and has since died down 
+    a bit. It's still a fun town and I always look forward to coming home.
+  image: 'Sydney.jpg'
+  coords:
+  - 46.136999
+  - -60.191637
+  mapZoom: 16
+  icon: 'fa-city'  
+  animDur: 4
+# - title: The other Sydney
+#   text: G'day mate ;)
+#   image: false
+#   coords:
+#   - -33.869044
+#   - 151.208950 
+#   mapZoom: 12
+#   icon: 'fa-baby-carraige'
+#   animDur: 4  
+- title: The booming metropolis of Westmount
+  text: This is a suburb of Sydney. Origionally there was plans to build a bridge across the 
+    harbor and have a setup similar to Halifax/Dartmouth. The economy never took off enough
+    to support such a development but imagine what could have been!
+  image: false
+  coords:
+  - 46.140363
+  - -60.211664 
+  mapZoom: 16
+  icon: 'fa-igloo'
+  animDur: 3
+- title: Take me to my spatial place
+  text: This is where I'm current at school studying geographic sciences. My Granpa went here 
+    70 years ago, was in the inaugural graduating class and was a founding member of the Nova 
+    Scotia Land Surveyors Assosciation. Ed Symons is the best teacher.
+  image: 'COGS.jpg'
+  coords:
+  - 44.884931
+  - -65.16839
+  mapZoom: 16
+  icon: 'fa-cog'
+  animDur: 4
+- title: Where I'm to now
+  text: Here is where I'm living right at the moment, Scenic trout lake road. It's rustic and 
+    quaint, it's my battlestation and command center in the woods. There are some nice hikes 
+    around here too.
+  image: false
+  coords:
+  - 44.854447
+  - -65.140975
+  mapZoom: 16
+  icon: 'fa-dungeon'
+  animDur: 4

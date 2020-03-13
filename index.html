@@ -9,173 +9,29 @@
 
   <!--    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico"/>-->
 
+  <script src="https://kit.fontawesome.com/0f60f33414.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Domine|Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/leaflet.extra-markers.min.css">
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
-<style>
-  .content-wrapper {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-  }
-
-  #map-main {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  .chapter {
-    width: 25%;
-    height: 94%;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    border: solid 10px #000;
-    /* fallback for browsers that don't understand rgba */
-    background-color: rgba(255, 255, 255, 0.65);
-    /* slighly transparent white */
-    border-color: rgba(0, 0, 0, 0.2);
-    /*Very transparent black*/
-  }
-
-  #scroll-box {
-    width: 100vw;
-    height: 100vh;
-    overflow-y: scroll;
-  }
-</style>
 
 <body>
 
   <div class="content-wrapper">
     <div id="map-main"></div>
-    <div id="scroll-box">
-      <!-- <div class="chapter" id="chap-2"></div> -->
-    </div>
+    <div id="scroll-box"></div>
   </div>
 
 
   <script src="https://cdn-webgl.wrld3d.com/wrldjs/dist/latest/wrld.js"></script>
-
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <script src="js/leaflet.extra-markers.min.js"></script>
+  <!-- <script src="js/noframework.waypoints.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/yaml.min.js"></script>
 
-  <script src="js/noframework.waypoints.min.js"></script>
-
-  <script>
-    d = console.dir
-    l = console.log
-
-    const mapPoints = [
-      [46.123317, -60.199168],
-      [47.583355, -52.710977],
-      [46.181889, -59.832093],
-      [49.647676, -57.775012],
-      [44.854447, -65.140975],
-      [44.884931, -65.168390],
-    ];
-
-    const mapChapters = [
-      {
-        title: 'St. Rita\'s',
-        text: 'I was born here, it is now a parking lot. I still come back here from time to time and talk about how I was born here.',
-        image: false,
-        coords: [46.123317, -60.199168],
-        mapZoom: 16,
-        animDur: 5,
-      },
-      {
-        title: 'St John\'s',
-        text: 'After I was born I moved to St John\'s Newfoundland. I lived there until I was 8.',
-        image: false,
-        coords: [47.583355, -52.710977],
-        mapZoom: 18,
-        animDur: 10,
-      },
-      {
-        title: 'My favorite hike',
-        text: 'The Donkin cliff hike is really gorgeous. The layers of rock tell a story from the ancient past.',
-        image: false,
-        coords: [46.181889, -59.832093],
-        mapZoom: 16,
-        animDur: 5,
-      },
-      {
-        title: 'Gros Morne',
-        text: 'This spot is so beautiful! The only bear I ever saw in the wild was here.',
-        image: false,
-        coords: [49.647676, -57.775012],
-        mapZoom: 16,
-        animDur: 5,
-      },
-      {
-        title: 'Where I\'m to now.',
-        text: 'Here is where I\'m living right at the moment.',
-        image: false,
-        coords: [44.854447, -65.140975],
-        mapZoom: 16,
-        animDur: 5,
-      },
-      {
-        title: 'A spatial place',
-        text: 'All in all you\'re just another cog in the machine.',
-        image: false,
-        coords: [44.884931, -65.168390],
-        mapZoom: 16,
-        animDur: 5,
-      },                        
-    ];
-
-    var map = L.Wrld.map('map-main', '492318f4e8e647bf1a86b1ec29813509', {
-      center: [46.136145, -60.193993],
-      zoom: 16
-    });
-
-    const mapChapters2 = [
-      {
-        title: 'St. Rita\'s',
-        text: 'I was born here, it is now a parking lot. I still come back here from time to time and talk about how I was born here.',
-        image: false,
-        coords: [46.123317, -60.199168],
-        mapZoom: 16,
-        animDur: 5,
-      }
-    ]
-
-    scrollBox = document.getElementById('scroll-box');
-    for (let i = 0; i < mapChapters.length; i++) {
-      scrollBox.innerHTML += '<div class="chapter"></div>';
-    }
-
-    var currentChapter = 1;
-    const chapters = document.getElementsByClassName('chapter');
-
-    for (let i = 0; i < chapters.length; i++) {
-      chapters[i].innerHTML = '<h1>' + mapChapters[i].title + '</h1>'+
-            '<p>'+mapChapters[i].text+'</p>';
-      new Waypoint({
-        element: chapters[i],
-        handler: function () {
-          if(currentChapter == i) return;
-          currentChapter = i;
-          map.setView(mapChapters[i].coords, mapChapters[i].zoom, {
-            headingDegrees: 270,
-            animate: true,
-            durationSeconds: mapChapters[i].animDur
-          });
-        },
-//        offset: -1 * chapters[i].offsetHeight,
-        context: document.getElementById('scroll-box')
-      });
-    };
-
-
-  </script>
+  <script src="js/main.js"></script>
 
 </body>
 
